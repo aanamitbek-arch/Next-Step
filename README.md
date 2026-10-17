@@ -6,7 +6,26 @@
 ---
 
 ## 📌 Key Features
+# 🚀 Next Step — AI-Driven Career Guidance Platform
 
+> **Next-Step** is a lightweight web platform designed to help students, high school seniors, and junior developers find entry-level job opportunities matching their skill sets while offering personalized AI recommendations and roadmaps.
+
+---
+
+## 📸 Interface Screenshots
+
+| Overview (Hero) | Candidate Profile |
+| :---: | :---: |
+| ![Hero Section](screenshot-hero.png) | ![Candidate Profile](screenshot-profile.png) |
+
+| Position Matching | Match & Gap Analysis |
+| :---: | :---: |
+| ![Job Opportunities](screenshot-job.png) | ![Match Results](screenshot-results.png) |
+
+---
+
+## 📌 Key Features
+...
 * **Authentication & Profile Setup:** Simple sign-in interface supporting standard login and Google OAuth integration.
 * **Smart Skill Analysis:** Fast, non-intrusive data collection via GitHub profile links, resume upload, and interactive skill tag selection.
 * **Match Score & Skill Gap Analysis:** Instant visual percentage breakdown of candidate fit for specific job roles along with missing technology alerts.
