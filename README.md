@@ -1,10 +1,4 @@
 # Next-Step
-# 🚀 Next Step — AI-Driven Career Guidance Platform
-
-> **Next-Step** is a lightweight web platform designed to help students, high school seniors, and junior developers find entry-level job opportunities matching their skill sets while offering personalized AI recommendations and roadmaps.
-
----
-
 ## 📌 Key Features
 # 🚀 Next Step — AI-Driven Career Guidance Platform
 
