@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Career — AI-Driven Career Platform</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">🚀 Smart <span>Career</span></div>
+        <nav class="nav-links">
+            <a href="#" onclick="showSection('hero')" class="active">Overview</a>
+            <a href="#" onclick="showSection('profile')">Profile</a>
+            <a href="#" onclick="showSection('jobs')">Positions</a>
+            <a href="#" onclick="showSection('analytics')">Market Data</a>
+        </nav>
+        <button class="btn btn-outline" onclick="showSection('profile')">Sign In</button>
+    </header>
+
+    <main class="container">
+
+        <!-- 1. HERO SECTION -->
+        <section id="hero" class="section active">
+            <div class="hero">
+                <span class="badge">AI-Powered Career Intelligence</span>
+                <h1>Find the Right Career Path</h1>
+                <p>Analyze your real skills and discover early-career opportunities aligned with your personal strengths.</p>
+                <div class="hero-actions">
+                    <button class="btn btn-primary" onclick="showSection('profile')">Start Matching</button>
+                    <button class="btn btn-outline" onclick="showSection('jobs')">Explore Jobs</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. STUDENT PROFILE SECTION -->
+        <section id="profile" class="section">
+            <div class="section-header">
+                <h2>Candidate Profile</h2>
+                <p>Provide your details to enable accurate AI skill mapping.</p>
+            </div>
+            
+            <div class="card">
+                <h3>Resume Upload</h3>
+                <div class="upload-zone" onclick="alert('Select your PDF/DOCX resume file.')">
+                    <div class="upload-icon">📄</div>
+                    <p><strong>Click to upload</strong> or drag and drop your resume file</p>
+                    <span class="upload-hint">PDF or DOCX (max. 5MB)</span>
+                </div>
+
+                <div class="form-group">
+                    <label>GitHub Profile URL</label>
+                    <input type="text" class="form-control" placeholder="https://github.com/username">
+                </div>
+
+                <div class="form-group">
+                    <label>Core Technical Skills</label>
+                    <div class="skills-selector">
+                        <div class="skill-tag" onclick="toggleSkill(this)">JavaScript</div>
+                        <div class="skill-tag" onclick="toggleSkill(this)">Python</div>
+                        <div class="skill-tag" onclick="toggleSkill(this)">React</div>
+                        <div class="skill-tag" onclick="toggleSkill(this)">SQL</div>
+                        <div class="skill-tag" onclick="toggleSkill(this)">Git</div>
+                        <div class="skill-tag" onclick="toggleSkill(this)">HTML/CSS</div>
+                        <div class="skill-tag" onclick="toggleSkill(this)">FastAPI</div>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary" onclick="showSection('jobs')">Save & Find Matching Jobs</button>
+            </div>
+        </section>
+
+        <!-- 3. JOB SELECTION SECTION -->
+        <section id="jobs" class="section">
+            <div class="section-header">
+                <h2>Recommended Positions</h2>
+                <p>Tailored opportunities matching your current skill set.</p>
+            </div>
+
+            <div class="job-grid">
+                <div class="job-card" onclick="showSection('results')">
+                    <div class="job-header">
+                        <span class="job-level">Junior</span>
+                        <span class="match-badge high">85% Match</span>
+                    </div>
+                    <h4>Frontend Developer (React)</h4>
+                    <p class="job-reqs">Required: JavaScript, React, Git, HTML/CSS</p>
+                    <span class="job-link">View Analysis &rarr;</span>
+                </div>
+
+                <div class="job-card" onclick="showSection('results')">
+                    <div class="job-header">
+                        <span class="job-level">Intern / Junior</span>
+                        <span class="match-badge medium">70% Match</span>
+                    </div>
+                    <h4>Python Backend Engineer</h4>
+                    <p class="job-reqs">Required: Python, SQL, Git, FastAPI</p>
+                    <span class="job-link">View Analysis &rarr;</span>
+                </div>
+
+                <div class="job-card" onclick="showSection('results')">
+                    <div class="job-header">
+                        <span class="job-level">Junior</span>
+                        <span class="match-badge high">92% Match</span>
+                    </div>
+                    <h4>Junior Web Integrator</h4>
+                    <p class="job-reqs">Required: HTML/CSS, JavaScript, Git</p>
+                    <span class="job-link">View Analysis &rarr;</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. MATCH RESULTS SECTION -->
+        <section id="results" class="section">
+            <div class="section-header">
+                <h2>Match Analysis</h2>
+                <p>Detailed breakdown of your candidate alignment and growth points.</p>
+            </div>
+
+            <div class="match-score-box">
+                <div class="score-circle">85%</div>
+                <div>
+                    <h3>Strong Candidate Fit</h3>
+                    <p>You meet most requirements for <strong>Frontend Developer</strong>. Closing a minor skill gap will increase interview readiness.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>🛠 Skills Gap Analysis</h3>
+                <p class="card-desc">Missing skills recommended to reach 100% suitability:</p>
+                <ul class="gap-list">
+                    <li>Advanced State Management (Redux Toolkit)</li>
+                    <li>Frontend Unit Testing (Jest)</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>🗺 Actionable Learning Roadmap</h3>
+                <div class="roadmap">
+                    <div class="roadmap-step">
+                        <div class="step-num">1</div>
+                        <div>
+                            <h5>Master State Management</h5>
+                            <p>Complete a structured 1-week course on Redux Toolkit and Context API.</p>
+                        </div>
+                    </div>
+                    <div class="roadmap-step">
+                        <div class="step-num">2</div>
+                        <div>
+                            <h5>Build & Showcase Project</h5>
+                            <p>Publish a full-stack portfolio app featuring state persistence and REST APIs.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. MARKET ANALYTICS SECTION -->
+        <section id="analytics" class="section">
+            <div class="section-header">
+                <h2>Market Intelligence</h2>
+                <p>In-demand tech stacks for entry-level developers based on current job postings.</p>
+            </div>
+
+            <div class="card">
+                <div class="analytics-bar">
+                    <div class="analytics-bar-header">
+                        <span>JavaScript / TypeScript</span>
+                        <span class="bar-val">78% of listings</span>
+                    </div>
+                    <div class="progress-track"><div class="progress-fill" style="width: 78%;"></div></div>
+                </div>
+
+                <div class="analytics-bar">
+                    <div class="analytics-bar-header">
+                        <span>Python / Django / FastAPI</span>
+                        <span class="bar-val">65% of listings</span>
+                    </div>
+                    <div class="progress-track"><div class="progress-fill" style="width: 65%;"></div></div>
+                </div>
+
+                <div class="analytics-bar">
+                    <div class="analytics-bar-header">
+                        <span>React / Modern Frontend</span>
+                        <span class="bar-val">60% of listings</span>
+                    </div>
+                    <div class="progress-track"><div class="progress-fill" style="width: 60%;"></div></div>
+                </div>
+
+                <div class="analytics-bar">
+                    <div class="analytics-bar-header">
+                        <span>SQL & Relational Databases</span>
+                        <span class="bar-val">50% of listings</span>
+                    </div>
+                    <div class="progress-track"><div class="progress-fill" style="width: 50%;"></div></div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
