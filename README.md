@@ -38,3 +38,12 @@ git clone [https://github.com/aanamitbek-arch/Next-Step.git](https://github.com/
 cd Next-Step
 
 # Open index.html in your browser or run via VS Code Live Server
+## 📸 Interface Screenshots
+
+| Overview (Hero Section) | Candidate Profile |
+| :---: | :---: |
+| ![Hero Section](screenshot-hero.png) | ![Candidate Profile](screenshot-profile.png) |
+
+| Position Matching & Analysis |
+| :---: |
+| ![Match Results](screenshot-results.png) |
